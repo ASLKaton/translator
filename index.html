@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Переводчик</title>
+    <meta charset="UTF-8" />
+
+    <style>
+      h3 {
+        font-family: sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .textarea {
+        height: 200px;
+        width: 45%;
+        border: 1px solid #ccc;
+        padding: 10px;
+        resize: none;
+      }
+      .translate-btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .result {
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 45%;
+        min-height: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>С Русского на непонятный</h3>
+
+    <div class="container">
+      <textarea
+        class="textarea"
+        placeholder="Введите текст для перевода"
+        id="inputRussian"
+      ></textarea>
+      <button class="translate-btn" id="buttonRussian">Перевести</button>
+      <div class="result">
+        <p id="resultStrange">Здесь будет результат перевода</p>
+      </div>
+    </div>
+
+    <h3>С Непонятного на русский</h3>
+
+    <div class="container">
+      <textarea
+        class="textarea"
+        placeholder="Введите текст для перевода"
+        id="inputStrange"
+      ></textarea>
+      <button class="translate-btn" id="buttonStrange">Перевести</button>
+      <div class="result">
+        <p id="resultRussian">Здесь будет результат перевода</p>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
